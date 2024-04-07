@@ -18,8 +18,6 @@
 	</div>
 </template>
 
-<script setup>
-import NewsCloseBtn from '~/components/news-popup-page/NewsCloseBtn.vue';
-</script>
+<script setup></script>
 
 <style lang="scss" scoped></style>
