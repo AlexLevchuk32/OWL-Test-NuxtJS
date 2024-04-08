@@ -187,10 +187,23 @@ body {
 	}
 	// .news-popup-content__text-link
 	&__text-link {
+		position: relative;
+		margin-right: rem(8);
 		span {
 			color: #ca2250;
+			&:hover {
+				opacity: 0.6;
+			}
+			&::after {
+				position: absolute;
+				content: url('/public/images/icons/text-link.svg');
+				width: rem(10);
+				height: rem(10);
+				right: rem(-12);
+			}
 		}
 	}
+
 	// .news-popup-content__img
 	&__img {
 		margin-top: rem(32);
