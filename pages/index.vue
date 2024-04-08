@@ -2,17 +2,17 @@
 	<div>
 		<section class="news-popup">
 			<div class="container">
-				<NewsPopupPageNewsCloseBtn />
+				<NewsPopupPageCloseBtn />
 
 				<div class="news-popup__header">
-					<NewsPopupPageNewsBreadcrumbs />
+					<NewsPopupPageBreadcrumbs />
 				</div>
 
-				<NewsPopupPageNewsPopupTop />
+				<NewsPopupPageTop />
 
-				<NewsPopupPageNewsPopupContent />
+				<NewsPopupPageContent />
 
-				<NewsPopupPageNewsCardNext />
+				<NewsPopupPageCardNext />
 			</div>
 		</section>
 	</div>
