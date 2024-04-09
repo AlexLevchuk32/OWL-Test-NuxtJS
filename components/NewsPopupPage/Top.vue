@@ -1,13 +1,17 @@
 <template>
 	<div>
 		<div class="news-popup-top">
-			<div class="news-popup-top__tags news-tags">
+			<div
+				class="news-popup-top__tags news-tags"
+				v-for="tagName in tagsNames"
+				:key="tagName"
+			>
 				<div class="news-tags__item">
-					<span>в СМИ</span>
+					<span>{{ tagName[0] }}</span>
 				</div>
 				<div class="news-tags__item">
-					<img src="/public/images/icons/percent-icon.svg" alt="icon" />
-					<span>акции</span>
+					<!-- <img src="/public/images/icons/percent-icon.svg" alt="icon" /> -->
+					<span>{{ tagName[1] }}</span>
 				</div>
 			</div>
 			<h1 class="news-popup-top__title">
@@ -24,6 +28,7 @@ const props = defineProps({
 	tagsNames: { type: Array },
 	tagsColors: { type: Array },
 });
+// console.log(props.tagsNames);
 </script>
 
 <style lang="scss" scoped></style>

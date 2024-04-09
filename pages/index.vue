@@ -10,8 +10,8 @@
 
 				<NewsPopupPageTop
 					:title="title"
-					:tagsNames="[tagsNames]"
-					:tagsColors="[tagsColors]"
+					:tagsNames="[tagsNames()]"
+					:tagsColors="[tagsColors()]"
 				/>
 
 				<NewsPopupPageContent />
