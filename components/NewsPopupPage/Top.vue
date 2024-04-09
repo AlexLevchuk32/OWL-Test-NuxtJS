@@ -11,13 +11,19 @@
 				</div>
 			</div>
 			<h1 class="news-popup-top__title">
-				Средняя ставка по ипотеке в России превысила 8%
+				{{ title }}
 			</h1>
 			<div class="news-popup-top__date">06.10.2023</div>
 		</div>
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+	title: { type: String },
+	tagsNames: { type: Array },
+	tagsColors: { type: Array },
+});
+</script>
 
 <style lang="scss" scoped></style>
