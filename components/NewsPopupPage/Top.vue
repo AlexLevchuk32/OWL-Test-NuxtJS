@@ -3,15 +3,15 @@
 		<div class="news-popup-top">
 			<div
 				class="news-popup-top__tags news-tags"
-				v-for="tagName in tagsNames"
+				v-for="(tagName, index) in tagsNames"
 				:key="tagName"
 			>
 				<div class="news-tags__item">
-					<span>{{ tagName[0] }}</span>
+					<span>{{ tagName[index] }}</span>
 				</div>
 				<div class="news-tags__item">
 					<!-- <img src="/public/images/icons/percent-icon.svg" alt="icon" /> -->
-					<span>{{ tagName[1] }}</span>
+					<span>{{ tagName[index + 1] }}</span>
 				</div>
 			</div>
 			<h1 class="news-popup-top__title">
