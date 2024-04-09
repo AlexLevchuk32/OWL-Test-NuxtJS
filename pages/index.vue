@@ -30,22 +30,21 @@ const tagsColors = ref();
 
 const { data } = await useFetch(
 	'https://bsk-admin-test.testers-site.ru/api/news/novogodnee-vesele-ot-kompanii-bsk-kak-proshla-yelkabsk-v-2023-godu',
-	{},
 );
-
-// console.log(data._value.data.result.tags[0]);
+// console.log(data);
 
 title._value = data._value.data.result.title;
 tags._value = data._value.data.result.tags;
 
 // console.log(title._value);
-// console.log(tags._values);
+// console.log(tags._value);
 // console.log(tags._value[0].values[0].name);
+// console.log(data._value.data.result.tags[0]);
 
 tagsNames._value = () => {
 	const namesArr = [];
 
-	tags._value.forEach((el) => {
+	tags._value.forEach((el, i) => {
 		namesArr.push(el.values[0].name);
 	});
 

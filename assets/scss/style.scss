@@ -170,11 +170,38 @@ body {
 		}
 		&:nth-child(even) {
 			border: rem(1) solid #ca2250;
-			gap: rem(4);
 			span {
 				color: #ca2250;
 			}
 		}
+	}
+}
+
+.news-tags__item--blue {
+	display: flex;
+	border-radius: rem(20);
+	padding: rem(4) rem(12);
+	opacity: 1;
+	font-size: rem(14);
+	line-height: 129%;
+	letter-spacing: 0.02em;
+	border: rem(1) solid blue;
+	span {
+		color: blue;
+	}
+}
+
+.news-tags__item--red {
+	display: flex;
+	border-radius: rem(20);
+	padding: rem(4) rem(12);
+	opacity: 1;
+	font-size: rem(14);
+	line-height: 129%;
+	letter-spacing: 0.02em;
+	border: rem(1) solid red;
+	span {
+		color: red;
 	}
 }
 
