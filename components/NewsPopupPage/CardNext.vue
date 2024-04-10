@@ -11,24 +11,27 @@
 						<div class="news-card__date">
 							<span>06.10.2023</span>
 						</div>
-						<img
-							src="/public/images/news-photo/news-card-preview.webp"
-							alt="news preview"
-						/>
+						<img :src="nextPicture" alt="news preview" />
 					</div>
 
 					<div class="news-card__info">
 						<h2 class="news-card__info-title">
-							Правительство продлило «Льготную ипотеку» и расширило «Семейную».
+							{{ nextTitle }}
 						</h2>
-						<div class="news-card__info-tags news-tags">
-							<div class="news-tags__item">
-								<span>в СМИ</span>
-							</div>
-							<div class="news-tags__item">
-								<img src="/public/images/icons/percent-icon.svg" alt="icon" />
-								<span>акции</span>
-							</div>
+						<div
+							class="news-card__info-tags news-tags"
+							v-for="(tagName, index) in nextTagsNames"
+							:key="tagName"
+						>
+							<template v-for="(color, index) in nextTagsColors" :key="color">
+								<div :class="'news-tags__item--' + color[index]">
+									<span>{{ tagName[index] }}</span>
+								</div>
+								<div :class="'news-tags__item--' + color[index + 1]">
+									<!-- <img src="/public/images/icons/percent-icon.svg" alt="icon" /> -->
+									<span>{{ tagName[index + 1] }}</span>
+								</div>
+							</template>
 						</div>
 					</div>
 				</div>
@@ -53,6 +56,13 @@
 	</div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+	nextTitle: { type: String },
+	nextTagsNames: { type: Array },
+	nextTagsColors: { type: Array },
+	nextPicture: { type: String },
+});
+</script>
 
 <style lang="scss" scoped></style>
